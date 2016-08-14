@@ -1,3 +1,10 @@
+Notes about this fork
+=====================
+
+This fork does not add any functionality. It was only created to make the
+project compatible with plugin managers linke Vundle or Dein.
+
+
 spelllangidentifier
 ===================
 
