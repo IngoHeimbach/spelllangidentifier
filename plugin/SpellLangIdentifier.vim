@@ -32,7 +32,7 @@ if !exists('g:sliScriptPath')
    let s:sliScriptPath = expand('<sfile>:p:h') . "/LanguageIdentifier.sh"
 endif
 if !exists('g:sliPath')
-   let g:sliPath = ""
+   let g:sliPath = "-path " . expand('<sfile>:p:h') . "/mguesser/mguesser"
 endif
 if !exists('g:sliMaps')
    let g:sliMaps = ""
