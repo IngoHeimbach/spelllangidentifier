@@ -2,7 +2,7 @@ Notes about this fork
 =====================
 
 This fork was created to make the project compatible with plugin managers
-like Vundle or Dein.
+like Vundle or Dein and to add OSX compatibility.
 
 
 spelllangidentifier
