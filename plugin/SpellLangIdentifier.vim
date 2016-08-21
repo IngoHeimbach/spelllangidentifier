@@ -46,6 +46,9 @@ endif
 if !exists('g:sliSubs')
    let g:sliSubs = ""
 endif
+if !exists('g:sliSpellfileDirectory')
+   let g:sliSpellfileDirectory = expand('~') . "/.vim/spell/"
+endif
 "if !exists('g:sliFiletype')
 "   let g:sliFiletype = ""
 "endif
@@ -98,7 +101,7 @@ function! <SID>SpellLangIdentify( cmd ) range
    elseif !empty(lang) " If input length is 0 then the identification has failed because there is not enough information (soft error).
       if lang != "ERROR"
          " Set the spell language(s) based on the guessing
-         silent execute ":setlocal spelllang=" . lang . "\n"
+         silent execute ":setlocal spelllang=" . lang . " spellfile=" . g:sliSpellfileDirectory . substitute(lang, "_.*", "", "") . ".utf-8.add" . "\n"
          " Execute the user given arguments now the language is identified
          execute a:cmd
 
