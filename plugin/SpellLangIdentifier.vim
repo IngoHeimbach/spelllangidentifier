@@ -102,6 +102,8 @@ function! <SID>SpellLangIdentify( cmd ) range
       if lang != "ERROR"
          " Set the spell language(s) based on the guessing
          silent execute ":setlocal spelllang=" . lang . " spellfile=" . g:sliSpellfileDirectory . substitute(lang, "_.*", "", "") . ".utf-8.add" . "\n"
+         " Set language for `thesaurus_query.vim` plugin
+         let b:tq_language = [lang[0:1]]
          " Execute the user given arguments now the language is identified
          execute a:cmd
 
