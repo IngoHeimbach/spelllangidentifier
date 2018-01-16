@@ -113,5 +113,6 @@ function! <SID>SpellLangIdentify( cmd ) range
 endfunction
 
 augroup LangIdentify
+    autocmd!
     autocmd FileType text,mail,rst,markdown,gitcommit :autocmd! LangIdentify InsertLeave,CursorHold,CursorHoldI <buffer> '{,'}SpellLangIdentify setlocal spell
 augroup END
